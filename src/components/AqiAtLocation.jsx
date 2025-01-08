@@ -2,6 +2,16 @@
 
 import { useEffect, useState } from "react"
 
+function getAqiLabel(aqi) {
+    if (aqi === null) return ''
+    if (aqi < 55) return 'Good'
+    if (aqi < 155) return 'Moderate'
+    if (aqi < 255) return 'Unhealthy for Sensitve Groups'
+    if (aqi < 355) return 'Unhealthy'
+    if (aqi < 425) return 'Very Unhealthy'
+    return 'Hazardous'
+}
+
 export default function AqiAtLocation() {
     const [userLocation, setUserLocation] = useState()
     const [currentAqi, setCurrentAqi] = useState({ name: 'Loading...', aqi: null})
@@ -32,8 +42,10 @@ export default function AqiAtLocation() {
         if (userLocation) loadAqi()
     }, [userLocation])
 
+    const aqiLabel = getAqiLabel(currentAqi.aqi)
+
     return (<>
         <h1>{currentAqi.name}</h1>
-        {currentAqi.aqi && <div className='aqi'>{currentAqi.aqi} μg/m³</div>}  
+        {currentAqi.aqi && <div className='aqi'>{aqiLabel} ({currentAqi.aqi} μg/m³)</div>}  
     </>)
 }
