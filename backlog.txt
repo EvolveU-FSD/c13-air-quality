@@ -2,6 +2,10 @@
 In Progress:
 
 Todo:
+- get city from user location
+  - currently hardcoded to Calgary
+
+- select pollutant
 - user denies location priviledge
 - look at ANOTHER location
 - history

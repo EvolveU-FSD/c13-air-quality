@@ -2,24 +2,23 @@
 
 import { useEffect, useState } from "react"
 
+const aqiLevels = [
+    { threshold: 55, label: 'Good', className: 'aqi-good'},
+    { threshold: 155, label: 'Moderate', className: 'aqi-moderate'},
+    { threshold: 255, label: 'Unhealthy for Sensitve Groups', className: 'aqi-unhealthy-for-sensitive-groups'},
+    { threshold: 355, label: 'Unhealthy', className: 'aqi-unhealthy'},
+    { threshold: 425, label: 'Very Unhealthy', className: 'aqi-very-unhealthy'},
+    { threshold: 1000, label: 'Hazardous', className: 'aqi-hazardous'},
+]
+
 function getAqiLabel(aqi) {
     if (aqi === null) return ''
-    if (aqi < 55) return 'Good'
-    if (aqi < 155) return 'Moderate'
-    if (aqi < 255) return 'Unhealthy for Sensitve Groups'
-    if (aqi < 355) return 'Unhealthy'
-    if (aqi < 425) return 'Very Unhealthy'
-    return 'Hazardous'
+    return aqiLevels.find((level) => aqi<level.threshold).label
 }
 
 function getAqiClassName(aqi) {
     if (aqi === null) return ''
-    if (aqi < 55) return 'aqi-good'
-    if (aqi < 155) return 'aqi-moderate'
-    if (aqi < 255) return 'aqi-unhealthy-for-sensitive-groups'
-    if (aqi < 355) return 'aqi-unhealthy'
-    if (aqi < 425) return 'aqi-very-unhealthy'
-    return 'aqi-hazardous'
+    return aqiLevels.find((level) => aqi<level.threshold).className
 }
 
 export default function AqiAtLocation() {
