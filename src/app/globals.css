@@ -28,3 +28,27 @@ h1 {
 .aqi {
   font-size: 1.5em;
 }
+
+.aqi-good {
+  background-color: #50ccaa;
+}
+
+.aqi-moderate {
+  background-color: #f0e641;
+}
+
+.aqi-unhealthy-for-sensitive-groups {
+  background-color: #f0a741;  
+}
+
+.aqi-unhealthy {
+  background-color: #ff5050;
+}
+
+.aqi-very-unhealthy {
+  background-color: #960032;
+}
+
+.aqi-hazardous {
+  background-color: #7d2181;
+}
