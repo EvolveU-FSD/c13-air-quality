@@ -1,16 +1,22 @@
 
 In Progress:
+- use MY location (use location on browser, pass it through to the api endpoint)
+  https://air-quality-api.open-meteo.com/v1/air-quality?latitude=51&longitude=-114&hourly=pm10&past_hours=1&forecast_hours=0
 
 Todo:
-- use MY location
-- good/ok/moderate (with color)
+
+- good/ok/moderate
+  PM10 (μg/m³)	24h	0-55	55-155	155-255	255-355	355-425	425-505	505-605
+
+- colors for aqi levels
+
 - look at ANOTHER location
 - history
 - map
 - monthly average
 - forecasts
 - deploy
-- daily refresh???
+- daily refresh
 
 Done:
 - Show basic location and aqi value

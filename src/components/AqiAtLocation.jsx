@@ -7,7 +7,7 @@ export default function AqiAtLocation() {
 
     useEffect(() => {
         async function loadAqi() {
-            const response = await fetch('/api/aqi')
+            const response = await fetch('/api/aqi?latitude=51&longitude=-114')
             if (response.status !== 200) {
                 throw new Error('Fetch of AQI failed')
             }
@@ -19,6 +19,6 @@ export default function AqiAtLocation() {
 
     return (<>
         <h1>{currentAqi.name}</h1>
-        <div className='aqi'>{currentAqi.aqi}</div>
+        {currentAqi.aqi && <div className='aqi'>{currentAqi.aqi} μg/m³</div>}  
     </>)
 }
