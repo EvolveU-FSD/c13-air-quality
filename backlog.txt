@@ -1,0 +1,16 @@
+
+In Progress:
+
+Todo:
+- use MY location
+- good/ok/moderate (with color)
+- look at ANOTHER location
+- history
+- map
+- monthly average
+- forecasts
+- deploy
+- daily refresh???
+
+Done:
+- Show basic location and aqi value
