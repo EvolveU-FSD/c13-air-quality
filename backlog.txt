@@ -1,7 +1,5 @@
 
 In Progress:
-- use MY location (use location on browser, pass it through to the api endpoint)
-  https://air-quality-api.open-meteo.com/v1/air-quality?latitude=51&longitude=-114&hourly=pm10&past_hours=1&forecast_hours=0
 
 Todo:
 
@@ -10,6 +8,7 @@ Todo:
 
 - colors for aqi levels
 
+- user denies location priviledge
 - look at ANOTHER location
 - history
 - map
@@ -20,3 +19,6 @@ Todo:
 
 Done:
 - Show basic location and aqi value
+
+- use MY location (use location on browser, pass it through to the api endpoint)
+  https://air-quality-api.open-meteo.com/v1/air-quality?latitude=51&longitude=-114&hourly=pm10&past_hours=1&forecast_hours=0
